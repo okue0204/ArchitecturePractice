@@ -8,12 +8,12 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct TodoListView: View {
     var body: some View {
         
     }
 }
 
 #Preview {
-    ContentView()
+    TodoListView()
 }

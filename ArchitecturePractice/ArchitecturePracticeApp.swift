@@ -13,7 +13,7 @@ struct ArchitecturePracticeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TodoListView()
         }
     }
 }
