@@ -20,7 +20,7 @@ struct TodoEditView: View {
         self.onSave = onSave
         self.onCancel = onCancel
         _title = State(initialValue: todo.title)
-        _description = State(initialValue: todo.description)
+        _description = State(initialValue: todo.todoDescription)
     }
 
     var body: some View {
@@ -59,7 +59,12 @@ struct TodoEditView: View {
 
 #Preview {
     TodoEditView(
-        todo: Todo(id: UUID(), title: "サンプル", description: "説明文", createdAt: Date(), updatedAt: Date(), isCompleted: false),
+        todo: Todo(id: UUID(),
+                   title: "サンプル",
+                   todoDescription: "説明文",
+                   createdAt: Date(),
+                   updatedAt: Date(),
+                   isCompleted: false),
         onSave: { _, _ in },
         onCancel: {}
     )

@@ -7,12 +7,23 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 
-struct Todo: Identifiable, Equatable {
-    let id: UUID
-    let title: String
-    let description: String
-    let createdAt: Date
-    let updatedAt: Date
-    let isCompleted: Bool
+@Model
+class Todo: Identifiable, Equatable {
+    var id: UUID
+    var title: String
+    var todoDescription: String
+    var createdAt: Date
+    var updatedAt: Date
+    var isCompleted: Bool
+    
+    init(id: UUID, title: String, todoDescription: String, createdAt: Date, updatedAt: Date, isCompleted: Bool) {
+        self.id = id
+        self.title = title
+        self.todoDescription = todoDescription
+        self.createdAt = createdAt
+        self.updatedAt = updatedAt
+        self.isCompleted = isCompleted
+    }
 }
